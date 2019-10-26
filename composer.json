@@ -13,5 +13,11 @@
         }
     ],
     "minimum-stability": "stable",
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "MichaelDrennen\\OAuth1Signature\\": "src",
+            "MichaelDrennen\\OAuth1Signature\\Tests\\": "tests"
+        }
+    }
 }

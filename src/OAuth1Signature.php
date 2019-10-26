@@ -37,10 +37,12 @@ class OAuth1Signature {
 
         $signatureBaseString = implode( '&', $signatureBaseStringParts );
 
-        $signatureString = hash_hmac( "sha1", $signatureBaseString, $key, FALSE );
+        $signatureString = hash_hmac( "sha1", $signatureBaseString, $key, TRUE );
+
+        $base64EncodedSignatureString = base64_encode($signatureString);
 
 
-        return $signatureString;
+        return $base64EncodedSignatureString;
 
     }
 
